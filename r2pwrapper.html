@@ -7,16 +7,16 @@
 		window.addEventListener('message', (event) => {
 			console.log("message: ", event);
 			try {
-				console.log("wv1: ", event.data);
-				window.external.notify(event.data); // WebView1
-			} catch (e) { }
-			try {
 				console.log("wv2: ", event.data);
 				window.chrome.webview.postMessage(event.data); // WebView2
 			} catch (e) { }
 			try {
 				console.log("iOSWebView: ", event.data);
 				window.webkit.messageHandlers.iosListener.postMessage(event.data); // iOS WebView
+			} catch (e) { }
+			try {
+				console.log("iOSWebView: ", event.data);
+				webview.postMessage(event.data); // Android WebView
 			} catch (e) { }
 		}, false);
 
