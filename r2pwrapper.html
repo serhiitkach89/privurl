@@ -14,6 +14,10 @@
 				console.log("wv2: ", event.data);
 				window.chrome.webview.postMessage(event.data); // WebView2
 			} catch (e) { }
+			try {
+				console.log("iOSWebView: ", event.data);
+				window.webkit.messageHandlers.iosListener.postMessage(event.data); // iOS WebView
+			} catch (e) { }
 		}, false);
 
         document.addEventListener('DOMContentLoaded', e => {
