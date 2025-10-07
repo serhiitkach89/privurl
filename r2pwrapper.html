@@ -15,7 +15,7 @@
 				window.webkit.messageHandlers.iosListener.postMessage(event.data); // iOS WebView
 			} catch (e) { }
 			try {
-				console.log("iOSWebView: ", event.data);
+				console.log("AndroidWebView: ", event.data);
 				webview.postMessage(event.data); // Android WebView
 			} catch (e) { }
 		}, false);
