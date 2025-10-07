@@ -30,6 +30,7 @@
 			console.log("postmessage: ", msg);
 			var x = document.getElementById('iframe');
 			x.contentWindow.postMessage(msg, '*');
+			return true;
 		}
 	</script>
 </head>
